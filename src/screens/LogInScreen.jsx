@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View, Text, StyleSheet, TextInput,
+  View, Text, StyleSheet, TextInput, TouchableOpacity,
 } from 'react-native';
 import AppBar from '../components/AppBar';
 import Button from '../components/Button';
@@ -16,7 +16,9 @@ export default function LogInScrenn() {
         <Button label="submit" />
         <View style={styles.footrt}>
           <Text style={styles.footText}>Not registered?</Text>
-          <Text style={styles.footLink}>Sign up here!</Text>
+          <TouchableOpacity>
+            <Text style={styles.footLink}>Sign up here!</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
