@@ -24,7 +24,7 @@ export default function LogInScrenn(props) {
   }, []);
 
   function handlePress() {
-    firebase.auth().createUserWithEmailAndPassword(email, password)
+    firebase.auth().signInWithEmailAndPassword(email, password)
       .then((useCredenyial) => {
         const { user } = useCredenyial;
         console.log(user.uid);
