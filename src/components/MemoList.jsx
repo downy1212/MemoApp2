@@ -1,4 +1,3 @@
-import { Feather } from '@expo/vector-icons';
 import React from 'react';
 import {
   Text, View, StyleSheet, TouchableOpacity, Alert, FlatList,
@@ -9,6 +8,7 @@ import {
 } from 'prop-types';
 
 import { dateToString } from '../utils';
+import Icon from './Icon';
 
 export default function MemoList(props) {
   const { memos } = props;
@@ -27,7 +27,7 @@ export default function MemoList(props) {
           style={styles.memoDelete}
           onPress={() => { Alert.alert('Are you sure?'); }}
         >
-          <Feather name="x" size={16} color="#B0B0B0" />
+          <Icon name="delete" size={24} color="#B0B0B0" />
         </TouchableOpacity>
       </TouchableOpacity>
     );
