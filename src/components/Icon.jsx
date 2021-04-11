@@ -1,5 +1,5 @@
 import React from 'react';
-import { creatIconSetFromIconMoon } from '@expo/vector-icons';
+import { createIconSetFromIcoMoon } from '@expo/vector-icons';
 import { useFonts } from '@use-expo/font';
 import { number, string, oneOf } from 'prop-types';
 import icomoon from '../../assets/fonts/icomoon.ttf';
@@ -8,7 +8,7 @@ import selection from '../../assets/fonts/selection.json';
 export default function Icon(props) {
   const [fontLoaded] = useFonts({ icomoon });
   const { name, size, color } = props;
-  const CustomIcon = creatIconSetFromIconMoon(selection);
+  const CustomIcon = createIconSetFromIcoMoon(selection);
   if (!fontLoaded) {
     return null;
   }
